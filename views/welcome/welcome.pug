@@ -1,0 +1,15 @@
+doctype html
+head
+  meta(charset='utf-8')
+if displayName
+  h1 안녕하세요
+    |   
+    = displayName
+  p
+    a(href='/user/logout') 로그아웃
+else
+  h1 로그인 혹은 회원가입이 필요합니다.
+  p
+    a(href='/user/login') 로그인
+  p
+    a(href='/user/regist') 회원가입
