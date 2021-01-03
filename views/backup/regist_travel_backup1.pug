@@ -1,0 +1,31 @@
+doctype html
+head
+  script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+  script(src='/js/dropzone.min.js')
+  script(src='https://code.jquery.com/jquery-git.min.js')
+  link(rel='stylesheet' type='text/css' href='/semantic/dist/semantic.min.css')
+  link(rel='stylesheet' type='text/css' href='/css/dropzone.min.css')
+  script(src='/semantic/dist/semantic.min.js')
+  meta(charset='utf-8')
+
+body
+  .ui.container
+    p
+      a(href='/user/welcome')
+        h1.ui.center.aligned.blue.header 날아라 쩡아 
+      .ui.divider
+      
+      form.ui.form(aution='/user/regist' method='post' enctype='multipart/form-data')
+        #content_list
+          .ui.row.column.internally.celled.grid
+            .eight.wide.column
+              .ui.placeholder.segment
+                input(type='file' name='img_name')
+            .eight.wide.column
+              .ui.text
+                textarea(name='desc_text' rows='13')
+        button.ui.fluid.purple.button(type='submit') 등록
+      .ui.divider
+
+  script.
+    var write_cnt = 0;

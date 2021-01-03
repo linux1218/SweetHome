@@ -1,13 +1,60 @@
 doctype html
-h1 회원가입
-form(aution='/user/regist' method='post')
+head
+  script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+  link(rel='stylesheet' type='text/css' href='/semantic/dist/semantic.min.css')
+  script(src='/semantic/dist/semantic.min.js')
+  meta(charset='utf-8')
+
+body
   p
-    input(type='text' name='username' placeholder='아이디')
-  p
-    input(type='password' name='password' placeholder='비밀번호')
-  p
-    input(type='text' name='displayName' placeholder='대화명')
-  p
-    input(type='text' name='email' placeholder='이메일')
-  p
-    input(type='submit' value='가입요청')
+    //- 최상위 HEADER
+    h1.ui.center.aligned.blue.header 날아라 쩡아
+    //- 최상위 구분.  
+    .ui.divider
+    .ui.relaxed.column.internally.celled.grid.container
+      .three.wide.column
+        .ui.fluid.orange.basic.button 놀다온곳
+        .ui.divider
+        .ui.fluid.violet.basic.button 가고싶은
+        .ui.divider
+        .ui.fluid.grey.basic.button 지도확인
+        .ui.divider
+        .ui.fluid.purple.basic.button 게시판
+        .ui.divider
+
+      .ten.wide.column
+        form.ui.form(aution='/user/regist' method='post')
+          .field
+            label 아이디
+            input(type='text' name='username' placeholder='ID')
+          .field
+            label 패스워드
+            input(type='password' name='password' placeholder='PWD')
+          .field
+            label 대화명
+            input(type='text' name='displayName' placeholder='displayName')
+          .field
+            label 이메일
+            input(type='text' name='email' placeholder='email')
+          .field
+          button.ui.fluid.purple.button(type='submit') 회원가입
+        .one.wide.column
+        .ui.divider
+
+  script.
+    $('.ui.dropdown').dropdown();
+
+//- 
+//- doctype html
+//- h1 회원가입
+//- form(aution='/user/regist' method='post')
+//-   p
+//-     input(type='text' name='username' placeholder='아이디')
+//-   p
+//-     input(type='password' name='password' placeholder='비밀번호')
+//-   p
+//-     input(type='text' name='displayName' placeholder='대화명')
+//-   p
+//-     input(type='text' name='email' placeholder='이메일')
+//-   p
+//-     input(type='submit' value='가입요청')

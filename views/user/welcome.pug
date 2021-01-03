@@ -1,15 +1,108 @@
 doctype html
 head
+  script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+  link(rel='stylesheet' type='text/css' href='/semantic/dist/semantic.min.css')
+  script(src='/semantic/dist/semantic.min.js')
   meta(charset='utf-8')
-if displayName
-  h1 안녕하세요
-    |   
-    = displayName
+
+body
   p
-    a(href='/user/logout') 로그아웃
-else
-  h1 로그인 혹은 회원가입이 필요합니다.
-  p
-    a(href='/user/login') 로그인
-  p
-    a(href='/user/regist') 회원가입
+    //- 최상위 HEADER
+    a(href='/user/welcome')
+      h1.ui.center.aligned.blue.header 날아라 쩡아
+    //- 최상위 구분.  
+    .ui.divider
+    .ui.relaxed.column.internally.celled.grid.container
+      .three.wide.column
+        a(href='/travel/wanted')
+          .ui.fluid.orange.basic.button 놀다온곳
+        .ui.divider
+        a(href='/travel/want')
+          .ui.fluid.violet.basic.button 가고싶은
+        .ui.divider
+        .ui.fluid.grey.basic.button 지도확인
+        .ui.divider
+        .ui.fluid.purple.basic.button 게시판
+        .ui.divider
+
+      .ten.wide.column
+        button.ui.fluid.violet.basic.button test Part
+        .ui.middle.aligned.divided.list
+          .item
+            .right.floated.content
+              .ui.button Add
+            img.ui.avatar.image(src='/images/welcome.jpg')
+            .content
+              | Lena
+          .item
+            .right.floated.content
+              .ui.button Add
+            img.ui.avatar.image(src='/images/welcome.jpg')
+            .content
+              | Lindsay
+          .item
+            .right.floated.content
+              .ui.button Add
+            img.ui.avatar.image(src='/images/welcome.jpg')
+            .content
+              | Mark
+          .item
+            .right.floated.content
+              .ui.button Add
+            img.ui.avatar.image(src='/images/welcome.jpg')
+            .content
+              | Molly
+              
+      .three.wide.column
+        if displayName
+          label 어서오세요
+          |
+          = displayName
+          a(href='/user/logout')
+            button.ui.fluid.olive.button 로그아웃
+              
+        else
+          form(action='/user/login' method='post')  
+            .ui.form
+              .field
+                label 아이디
+                input(type='text' name='username' placeholder='ID')
+              .field
+                label 패스워드
+                input(type='password' name='password' placeholder='PWD')
+              .field
+              .ui.divider
+              button.positive.ui.fluid.button(type='submit') 로그인
+
+          .ui.divider
+          a(href='/user/regist')
+            button.ui.fluid.olive.button 회원가입
+
+  script.
+    $('.ui.dropdown').dropdown();
+
+
+
+//- doctype html
+//- head
+//-   script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+//-   link(rel='stylesheet' type='text/css' href='/semantic/dist/semantic.min.css')
+//-   script(src='/semantic/dist/semantic.min.js')
+//-   meta(charset='utf-8')
+//- body
+//- 
+//-   if displayName
+//-     h1 안녕하세요
+//-       |
+//-       = displayName
+//-     p
+//-       a(href='/user/logout') 로그아웃
+//-   else
+//-     h1 로그인 혹은 회원가입이 필요합니다.
+//-     p
+//-       a(href='/user/login') 로그인
+//-     p
+//-       a(href='/user/regist') 회원가입
+//- 
+//-   p
+//-     a(href='/user/sample') UI SAMPLE PAGE

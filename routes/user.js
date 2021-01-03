@@ -21,9 +21,22 @@ module.exports = function(passport) {
     }
   });
 
+  route.get('/sample/button', function(req, res) {
+    res.render('user/sample/sample_button');
+  });
+
+  route.get('/sample/test', function(req, res) {
+    res.render('user/sample/test');
+  });
+
+  route.get('/sample', function(req, res) {
+    res.render('user/sample/menu');
+  });
+
   route.get('/login', function(req, res) {
     res.render('user/login');
   });
+
   route.get('/regist', function(req, res) {
     res.render('user/regist');
   });

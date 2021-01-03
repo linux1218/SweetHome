@@ -1,0 +1,50 @@
+doctype html
+head
+  script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+  script(src='/js/dropzone.min.js')
+  script(src='https://code.jquery.com/jquery-git.min.js')
+  link(rel='stylesheet' type='text/css' href='/semantic/dist/semantic.min.css')
+  link(rel='stylesheet' type='text/css' href='/css/dropzone.min.css')
+  script(src='/semantic/dist/semantic.min.js')
+  meta(charset='utf-8')
+
+body
+  .ui.container
+    p
+      a(href='/user/welcome')
+        h1.ui.center.aligned.blue.header 날아라 쩡아 
+      .ui.divider
+      
+      form.ui.form(aution='/travel/regist' method='post' enctype='multipart/form-data')
+        #content_list
+          //- .ui.row.column.internally.celled.grid
+          //-   .eight.wide.column
+          //-     .ui.placeholder.segment
+          //-       input(type='file' name='img_name')
+          //-   .eight.wide.column
+          //-     .ui.text
+          //-       textarea(name='desc_text' rows='13' cols='70')
+        input(type='submit')
+      button 추가
+      .ui.divider
+
+  script.
+    var write_cnt = 0;
+    $(function() {
+      $("button").on("click", function() {
+          //- $("#content_list").append("<li>새로 추가된  아이템</li>");
+          $("#content_list").append(`<div class="ui row column internally celled grid">
+                                      <div class="eight wide column">
+                                        <div class="ui placeholder segment">
+                                          <input type="file" name="img_name_${write_cnt}">
+                                        </div>
+                                      </div>
+                                      <div class="eight wide column">
+                                        <textarea name="desc_text_${write_cnt}" rows="14" cols="70"></textarea>
+                                      </div>
+                                    </div>
+                                    <div class="ui divider"></div>`
+        );
+        write_cnt++;
+      });
+    });

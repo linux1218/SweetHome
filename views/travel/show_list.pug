@@ -1,0 +1,50 @@
+doctype html
+head
+  script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+  link(rel='stylesheet' type='text/css' href='/semantic/dist/semantic.min.css')
+  script(src='/semantic/dist/semantic.min.js')
+  meta(charset='utf-8')
+
+body
+  p
+    //- 최상위 HEADER
+    a(href='/user/welcome')
+      h1.ui.center.aligned.blue.header 날아라 쩡아
+    //- 최상위 구분.  
+    .ui.divider
+    .ui.row
+    .ui.two.column.internally.celled.grid.container
+      .three.wide.column
+        a(href='/travel/wanted')
+          .ui.fluid.orange.basic.button 놀다온곳
+        .ui.divider
+        a(href='/travel/want')
+          .ui.fluid.violet.basic.button 가고싶은
+        .ui.divider
+        .ui.fluid.grey.basic.button 지도확인
+        .ui.divider
+        .ui.fluid.purple.basic.button 게시판
+        .ui.divider
+
+      .ten.wide.column
+        button.ui.fluid.purple.basic.button= title
+        .ui.middle.aligned.divided.list
+          .item
+            .right.floated.content
+              .ui.button Add
+            img.ui.avatar.image(src='/images/welcome.jpg')
+            .content
+              | Lena
+          .item
+            .right.floated.content
+              .ui.button Add
+            img.ui.avatar.image(src='/images/welcome.jpg')
+            .content
+              | Lindsay
+        a(href='/travel/regist')
+          button.ui.medium.black.right.floated.basic.button 글쓰기
+          //- button.ui.medium.olive.light.floated.button 글쓰기
+
+
+  script.
+    $('.ui.dropdown').dropdown();

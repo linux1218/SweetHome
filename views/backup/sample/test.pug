@@ -1,0 +1,304 @@
+doctype html
+head
+  script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+  link(rel='stylesheet' type='text/css' href='/semantic/dist/semantic.min.css')
+  script(src='/semantic/dist/semantic.min.js')
+  meta(charset='utf-8')
+
+body
+  p
+    //- 최상위 HEADER
+    h1.ui.center.aligned.blue.header 날아라 쩡아
+    //- 최상위 구분.  
+    .ui.divider
+    .ui.relaxed.column.relaxed.internally.celled.grid.container
+    
+      p
+        .three.wide.column
+          .ui.relaxed.row
+          .ui.relaxed.row
+            button.ui.fluid.violet.basic.button 놀다온곳
+            .ui.divider
+          .ui.relaxed.row
+            button.ui.fluid.violet.basic.button 가고싶은
+            .ui.divider
+          .ui.relaxed.row
+            button.ui.fluid.violet.basic.button 지도확인
+            .ui.divider
+          .ui.relaxed.row
+            button.ui.fluid.violet.basic.button 게시판
+            .ui.divider
+      p
+        .ten.wide.column
+          button.ui.fluid.violet.basic.button test Part
+          .ui.middle.aligned.divided.list
+            .item
+              .right.floated.content
+                .ui.button Add
+              img.ui.avatar.image(src='/images/welcome.jpg')
+              .content
+                | Lena
+            .item
+              .right.floated.content
+                .ui.button Add
+              img.ui.avatar.image(src='/images/welcome.jpg')
+              .content
+                | Lindsay
+            .item
+              .right.floated.content
+                .ui.button Add
+              img.ui.avatar.image(src='/images/welcome.jpg')
+              .content
+                | Mark
+            .item
+              .right.floated.content
+                .ui.button Add
+              img.ui.avatar.image(src='/images/welcome.jpg')
+              .content
+                | Molly
+      p  
+        .three.wide.column
+          form.ui.form(aution='/user/regist' method='post')
+            .field
+              label 아이디
+              input(type='text' name='username' placeholder='ID')
+            .field
+              label 패스워드
+              input(type='password' name='password' placeholder='PWD')
+            .field
+            button.positive.ui.fluid.button(type='submit') 로그인
+          .one.wide.column
+          button.ui.fluid.olive.button
+            a(href='/user/regist') 회원가입
+
+
+
+  //- 
+  //- p
+  //-   .ui.four.column.relaxed.internally.celled.grid.container
+  //-     .row
+  //-       .column
+  //-         button.ui.fluid.orange.basic.button Orange
+  //-       .column
+  //-         button.ui.fluid.green.basic.button Green
+  //-       .column
+  //-         button.ui.fluid.violet.basic.button Violet
+  //-       .column
+  //-         button.ui.fluid.grey.basic.button Grey
+  //-     .row
+  //-       .column
+  //-         button.ui.fluid.orange.basic.button Orange
+  //-       .column
+  //-         button.ui.fluid.green.basic.button Green
+  //-       .column
+  //-         button.ui.fluid.violet.basic.button Violet
+  //-       .column
+  //-         button.ui.fluid.grey.basic.button Grey
+  //-     .row
+  //-       .column
+  //-         button.ui.fluid.orange.basic.button Orange
+  //-       .column
+  //-         button.ui.fluid.green.basic.button Green
+  //-       .column
+  //-         button.ui.fluid.violet.basic.button Violet
+  //-       .column
+  //-         button.ui.fluid.grey.basic.button Grey
+  //- 
+  //- 
+  //- 
+
+
+  //- p
+  //-   .ui.grid
+  //-     .four.wide.column 1
+  //-     .four.wide.column 2
+  //-     .four.wide.column 3
+  //-     .four.wide.column 4
+  //-     .four.wide.column 5
+  //-     .four.wide.column 6
+  //-     .four.wide.column 7
+  //-     .four.wide.column 8
+  //-     .four.wide.column 9
+  //-     .four.wide.column 10
+  //-     .four.wide.column 11
+  //-     .four.wide.column 12
+  //-     .four.wide.column 13
+  //-     .four.wide.column 14
+  //-     .four.wide.column 15
+  //-     .four.wide.column 16
+  //-   p
+  //-   .ui.grid
+  //-     .column 1
+  //-     .column 2
+  //-     .column 3
+  //-     .column 4
+  //-     .column 5
+  //-     .column 6
+  //-     .column 7
+  //-     .column 8
+  //-     .column 9
+  //-     .column 10
+  //-     .column 11
+  //-     .column 12
+  //-     .column 13
+  //-     .column 14
+  //-     .column 15
+  //-     .column 16
+  //-   p
+  //-     .ui.four.column.grid
+  //-       .column
+  //-         button.ui.fluid.orange.basic.button Orange
+  //-       .column
+  //-         button.ui.fluid.green.basic.button Green
+  //-       .column
+  //-         button.ui.fluid.violet.basic.button Violet
+  //-       .column
+  //-         button.ui.fluid.grey.basic.button Grey
+  //- 
+  //-   p
+  //-     .ui.four.column.grid.container
+  //-       .column
+  //-         button.ui.fluid.orange.basic.button Orange
+  //-       .column
+  //-         button.ui.fluid.green.basic.button Green
+  //-       .column
+  //-         button.ui.fluid.violet.basic.button Violet
+  //-       .column
+  //-         button.ui.fluid.grey.basic.button Grey
+  //-   p
+  //-     .ui.four.column.relaxed.grid.container
+  //-       .column
+  //-         button.ui.fluid.orange.basic.button Orange
+  //-       .column
+  //-         button.ui.fluid.green.basic.button Green
+  //-       .column
+  //-         button.ui.fluid.violet.basic.button Violet
+  //-       .column
+  //-         button.ui.fluid.grey.basic.button Grey
+  //- 
+  //-   p
+  //-     .ui.four.column.relaxed.internally.celled.grid.container
+  //-       .row
+  //-         .column
+  //-             button.ui.fluid.orange.basic.button Orange
+  //-         .column
+  //-           button.ui.fluid.green.basic.button Green
+  //-         .column
+  //-           button.ui.fluid.violet.basic.button Violet
+  //-         .column
+  //-           button.ui.fluid.grey.basic.button Grey
+  //-       .row
+  //-         .column
+  //-             button.ui.fluid.orange.basic.button Orange
+  //-         .column
+  //-           button.ui.fluid.green.basic.button Green
+  //-         .column
+  //-           button.ui.fluid.violet.basic.button Violet
+  //-         .column
+  //-           button.ui.fluid.grey.basic.button Grey
+  //-       .row
+  //-         .column
+  //-             button.ui.fluid.orange.basic.button Orange
+  //-         .column
+  //-           button.ui.fluid.green.basic.button Green
+  //-         .column
+  //-           button.ui.fluid.violet.basic.button Violet
+  //-         .column
+  //-           button.ui.fluid.grey.basic.button Grey
+  //- 
+  //- 
+  //- p
+  //-   .ui.left.sidebar.visible.inverted.vertical.menu
+  //-     a.item
+  //-       | 1
+  //-     a.item
+  //-       | 2
+  //-     a.item
+  //-       | 3
+  //-     .pusher
+  //- 
+  //- .ui.container
+  //-   .ui.two.column.divided.grid
+  //-     .stretched.row
+  //-       two.column
+  //-         .ui.segment
+  //-           | 1
+  //-       two.column
+  //-         .ui.segment
+  //-           | 1
+  //-         .ui.segment
+  //-           | 2
+  //-       two.column
+  //-         .ui.segment
+  //-           | 1
+  //-         .ui.segment
+  //-           | 2
+  //-         .ui.segment
+  //-           | 3
+  //- 
+  //-   .ui.grid
+  //-     .two.wide.stretched.column
+  //-       button.ui.orange.basic.button orange
+
+  //- .ui.container
+  //-   p
+  //-     .ui.left.sidebar.visible.inverted.vertical.menu
+  //-       a.item
+  //-         | 1
+  //-       a.item
+  //-         | 2
+  //-       a.item
+  //-         | 3
+  //-       .pusher
+  //-   p
+  //-     .ui.right.sidebar.visible.inverted.vertical.menu
+  //-       a.item
+  //-         | 1
+  //-       a.item
+  //-         | 2
+  //-       a.item
+  //-         | 3
+  //-       a.item
+  //-         | 4
+  //-       .pusher
+  //- 
+  //-   p    
+  //-     .ui.grid
+  //-       .two.wide.stretched.column
+  //-         button.ui.orange.basic.button orange
+  //-       .two.wide.stretched.column
+  //-         button.ui.olive.basic.button olive 
+  //-       .two.wide.stretched.column
+  //-         button.ui.teal.basic.button teal
+  //-       .two.wide.stretched.column
+  //-         button.ui.violet.basic.button violet
+  //-       .two.wide.stretched.column
+  //-         button.ui.purple.basic.button purple
+  //-       .two.wide.stretched.column
+  //-         button.ui.brown.basic.button brown
+  //-       .two.wide.stretched.column
+  //-         button.ui.blue.basic.button blue
+  //-       .two.wide.stretched.column
+  //-         button.ui.grey.basic.button grey
+  //- p    
+  //-   .ui.grid
+  //-     .two.wide.stretched.column
+  //-       button.ui.orange.basic.button orange
+  //-     .two.wide.stretched.column
+  //-       button.ui.olive.basic.button olive 
+  //-     .two.wide.stretched.column
+  //-       button.ui.teal.basic.button teal
+  //-     .two.wide.stretched.column
+  //-       button.ui.violet.basic.button violet
+  //-     .two.wide.stretched.column
+  //-       button.ui.purple.basic.button purple
+  //-     .two.wide.stretched.column
+  //-       button.ui.brown.basic.button brown
+  //-     .two.wide.stretched.column
+  //-       button.ui.blue.basic.button blue
+  //-     .two.wide.stretched.column
+  //-       button.ui.grey.basic.button grey
+
+  //- script.
+  //-   $('.ui.left.sidebar').sidebar('show');
+  //-   $('.ui.right.sidebar').sidebar('show');

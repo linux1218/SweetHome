@@ -1,6 +1,43 @@
 doctype html
-h1 이미 가입된 사용자입니다.
-p
-  a(href='/welcome') 메인페이지 다시 가기
-p
-  a(href='/user/regist') 신규가입 다시 가기
+head
+  script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+  link(rel='stylesheet' type='text/css' href='/semantic/dist/semantic.min.css')
+  script(src='/semantic/dist/semantic.min.js')
+  meta(charset='utf-8')
+
+body
+  p
+    //- 최상위 HEADER
+    h1.ui.center.aligned.blue.header 날아라 쩡아
+    //- 최상위 구분.  
+    .ui.divider
+    .ui.relaxed.column.internally.celled.grid.container
+      .three.wide.column
+        .ui.fluid.orange.basic.button 놀다온곳
+        .ui.divider
+        .ui.fluid.violet.basic.button 가고싶은
+        .ui.divider
+        .ui.fluid.grey.basic.button 지도확인
+        .ui.divider
+        .ui.fluid.purple.basic.button 게시판
+        .ui.divider
+
+      .ten.wide.column
+        button.ui.fluid.olive.button
+          a(href='/user/welcome') 메인페이지 다시 가기
+        .ui.divider
+        button.ui.fluid.olive.button
+          a(href='/user/welcome') 신규가입 다시 가기
+        .ui.divider
+
+  script.
+    $('.ui.dropdown').dropdown();
+
+
+
+//- doctype html
+//- h1 이미 가입된 사용자입니다.
+//- p
+//-   a(href='/welcome') 메인페이지 다시 가기
+//- p
+//-   a(href='/user/regist') 신규가입 다시 가기
